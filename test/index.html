@@ -1,0 +1,111 @@
+﻿<!doctype html>
+<html >
+
+<head>
+<script type="text/javascript"> 
+ 		$(document).ready(function(){
+			$(".tb").each(function(){
+				var val = $(this).attr('value');
+				$(this).attr('rel', val);
+			});
+			$(".tb").focus(function(){
+				if(this.value==$(this).attr('rel')){this.value=''};
+			})
+			.blur(function(){
+				if(this.value==''){this.value=$(this).attr('rel')};
+			});
+		});
+ </script>
+
+
+
+<link rel="stylesheet" href="readme_files/screensmall.css" type="text/css" media="screen">
+<title>Qiau Food Reservation</title>
+</head>
+
+
+
+
+
+<body>
+<hr id="topborder">
+
+<div id="sidebar">
+	<h1><a href="#">Food<em>Form</em></a></h1>
+	<p>by <a href="http://lipidity.com">Javad EvazZadeh</a></p>
+	<ul id="nav">
+		<li><a href="#overview">Overview</a></li>
+		<li><a href="#contact">AboutMe</a></li>
+	</ul>
+</div>
+
+<div id="content">
+
+<hr id="overview">
+<div class='section'>
+	<h2>Overview</h2>
+	<p class="lead">This web application Reserve food for <em>Qiau Student</em> only with enter login data and require week day on <em>schedule</em> now you can test it <em>free.</em></p>
+	<h3>At a glance</h3>
+	<ul>
+		<li><strong>Quick Login</strong>: Login in less than 30 second</li>
+		<li><strong>Save Time</strong>: Save your time with Reserve multi days on each login</li>
+		<li><strong>User Friendly</strong>: Forms still work on older browsers with beautiful interface</li>
+	</ul>
+</div>
+
+<hr id="example">
+<div class='section demo'>
+	<h2>Qiau Food Reserve</h2>
+<form action='' onsubmit='void(0)'>
+
+	<h3>Needed Information, please enter correct!</h3>
+		<label>روزهای هفته</label>
+		<div class='leftcol'>
+		<label><input type="checkbox"> شنبه</label>
+		<label><input type="checkbox"> یکشنبه</label>
+		<label><input type="checkbox"> دوشنبه</label>
+		<label><input type="checkbox"> سه شنبه</label>
+		<label><input type="checkbox"> چهارشنبه</label>
+		<label><input type="checkbox">پنجشنبه</label>
+		<label><input type="checkbox">جمعه</label>
+		</div>
+	
+		
+		<div class='rightcol'>
+		<label>sss</label>
+		<label><input type="radio" name='rightcol'> دانشکده مهندسی برق و رایانه و فناوری اطلاعات</label>
+		<label><input type="radio" checked="checked" name='rightcol'> دانشکده صنایع و مکانیک</label>
+		<label><input type="radio" name='rightcol'> دانشکده فنی و حرفه ای</label>
+		<label><input type="radio" name='rightcol'> دانشکده عمران و معماری</label>
+		<label><input type="radio" name='rightcol'> دانشکده مدیریت و حسابداری</label>
+		<label><input type="checkbox">سامانه مدیریت پشتیبان</label>
+		</div>
+	<input type="reset" value="Reset Form" style='margin:1em;height:2.5em;background:#222;float:right;color:#fff'>
+	<input type="submit" value="Submit Form" style='margin:1em;height:2.5em;background:#222;float:right;color:#fff'>
+</form>
+	
+</div>
+
+<input type=”textbox” class=”tb” value="Javad" />
+
+
+<script type="text/javascript" src="mootools.js"></script>
+<script type="text/javascript" src="moocheck.js"></script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
